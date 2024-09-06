@@ -1,0 +1,50 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 1px 4px 12px rgb(0 0 0 / 26%);
+    height: 10vh;
+}
+.header  .logo{
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .logo a{
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+.header .links{
+    width: 50%;
+}
+.header .links ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.header .links ul li a{
+    font-size: 18px;
+    font-weight: 500px;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition-delay: .3s;
+    transition: all .3s;
+
+}
+.header .links ul a:hover{
+    background-color: rgba(71, 85, 105, .05);
+}
+.header select{
+    outline: none;
+    border: 1px solid #e5e7eb;
+    cursor: pointer;
+}
