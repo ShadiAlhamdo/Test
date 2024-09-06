@@ -15,7 +15,7 @@ import Homepage from './Components/Homepage';
 import Dashboard from './Components/Dashboard/Dashboard';
 import ErrorPage from './error-page';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
  
   {
     path: "/dashboard",
