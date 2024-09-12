@@ -2,6 +2,7 @@ import React from 'react'
 import  './About.css'
 import Title from '../Title/Title'
 import cookies from 'js-cookie';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const About=()=> {
   const lng=cookies.get('i18next')||"en"
@@ -15,9 +16,11 @@ const About=()=> {
             />
             <div className='content'>
             <div className='row left'>
-                <div className='img'>
+                <ScrollAnimation animateIn='fadeIn'
+                    animateOut='fadeOut'
+                    className='img'>
                   <img src='../../images/about.jpg' alt=''/>
-                </div>
+                </ScrollAnimation>
               </div>
               <div className='row right'>
                 <h1>{lng=="en"?`Shadi Alhamdo`:`شادي الحمدو`}</h1>

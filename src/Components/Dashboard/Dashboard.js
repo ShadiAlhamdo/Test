@@ -51,7 +51,10 @@ const [technical,setTechnical]=useState([]);
 const [technicalName,setTechnicalName]=useState('');
 const [loading, setLoading] = useState(false); // حالة للتحقق من التحميل
 const [error, setError] = useState(null); // حالة لتخزين الأخطاء
-const [success, setSuccess] = useState(false); // حالة لتخزين النجاح
+const [success, setCvSuccess] = useState(false);
+const [cvloading, setCvLoading] = useState(false); // حالة للتحقق من التحميل
+const [cverror, setCVError] = useState(null); // حالة لتخزين الأخطاء
+const [cvsuccess, setSuccess] = useState(false); // حالة لتخزين النجاح // حالة لتخزين النجاح
 const [message,setMessage]=useState([]);
 const [project,setproject]=useState([]);
 const [name_ar,setName_ar]=useState('');
@@ -96,6 +99,8 @@ const handleProjectChange=(event)=>{
 
 const handelCV = async (e) => {
     e.preventDefault();
+    setCvLoading(true); // بدء التحميل
+    setCVError(null); // إعادة تعيين الأخطاء السابقة
 
     if (!selectedFile) {
         toast.caller('يرجى اختيار ملف!');
@@ -126,14 +131,17 @@ const handelCV = async (e) => {
         
         console.log('تم رفع السيرة الذاتية بنجاح:', data);
         toast.success(`تم رفع السيرة الذاتية بنجاح:`)
+        setCvSuccess(true);
         // يمكنك هنا إعادة تعيين البيانات أو عرض رسالة نجاح للمستخدم
         
     } catch (error) {
+      setCVError(error.message)
         toast.error(`${error.message}خطأ في رفع السيرة الذاتية:`);
         console.error('خطأ في رفع السيرة الذاتية:', error.message);
         // إدارة الأخطاء - يمكنك تحديث الحالة لإظهار رسالة خطأ للمستخدم
     } finally {
         setUploading(false);
+        setCvLoading(false);
     }
 };
 
@@ -424,7 +432,12 @@ const handelProjectToolsRel=async(e)=>{
                 onChange={handleFileChange}
                 required 
             />
-            <button className='primary-btn' type="submit">إرسال</button>
+            <button className='primary-btn' type="submit">
+              
+              {cvloading ? 'جاري إضافة...' : 'إرسال'} {/* تغيير نص الزر أثناء التحميل */}
+              </button>
+            {cverror && <p style={{ color: 'red' }}>{error}</p>} {/* عرض الأخطاء إذا كانت موجودة */}
+            {cvsuccess && <p style={{ color: 'green' }}>تم إرسال الرسالة بنجاح!</p>} {/* عرض رسالة النجاح */}
         </form>
            </div>
            <div className='box'>

@@ -81,13 +81,16 @@ const handelShowCv = async () => {
                     </button>
             </div>
         
-            </div >
-            <div 
+            </div  >
+            <ScrollAnimation  animateIn='flipInX'
+  afterAnimatedIn={function afterAnimatedIn(v) {
+  	             
+  	            }}
             className='row right'>
                 <div className='img'>
                     <img src='../../images/home.svg' alt=''/>
                 </div>
-            </div >
+            </ScrollAnimation >
         </div>
     </section>
   )

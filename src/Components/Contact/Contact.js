@@ -97,7 +97,9 @@ const [success, setSuccess] = useState(false); // حالة لتخزين النج
                     required
                 />
                 <button className='secondary-btn' type='submit'  disabled={loading}>
-                    {lng === 'en' ? 'Send Message' : 'أرسل الرسالة'}
+                    
+                    {loading ? 'جاري إضافة...' : lng === 'en' ? 'Send Message' : 'أرسل الرسالة' } 
+
                 </button>
                 {error && <p style={{ color: 'red' }}>{error}</p>} {/* عرض الأخطاء إذا كانت موجودة */}
             {success && <p style={{ color: 'green' }}>تم إرسال الرسالة بنجاح!</p>} {/* عرض رسالة النجاح */}
