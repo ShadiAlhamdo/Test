@@ -9,7 +9,6 @@ import Footer from './Footer/Footer'
 import supabase from '../supabaseClient'
 
 function Homepage() {
-  console.log(supabase)
   return (
     <>
     <Header/>

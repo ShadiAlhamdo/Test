@@ -3,6 +3,7 @@ import './Home.css'
 import cookies from 'js-cookie';
 import toast from 'react-hot-toast';
 import supabase from '../../supabaseClient';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Home=()=> {
     
@@ -55,7 +56,8 @@ const handelShowCv = async () => {
   return (
     <section className='home' id='home'>
         <div className='container'>
-            <div className='row left'>
+            <div  
+            className='row left'>
             <p className='first'>{lng=="en"?`Hi, Im shadi Alhamdo `:`مرحباً , أنا شادي الحمدو`}</p>
             <h2 className=''>
             I'm <span className="gradient-text-color">Full-Stack</span>
@@ -65,8 +67,8 @@ const handelShowCv = async () => {
                  I work on developing websites from the front end using the Reactjs and Vuejs and Nextjs frameworks, and I ensure integrated design using Tailwindcss and Bootstrap.
                   I develop servers and connect to databases in a safe,
                    smooth and professional manner.`:`
-أنا مطور Full Stack.
-أنا مبرمج ويب متكامل. أعمل على تطوير مواقع الويب من الواجهة الأمامية باستخدام أطر عمل Reactjs وVuejs وNextjs، وأضمن التصميم المتكامل باستخدام Tailwindcss وBootstrap. أقوم بتطوير الخوادم والاتصال بقواعد البيانات بشكل آمن وسلس`}
+                   أنا مطور مواقع ويب , اعمل على تطوير واجهات الويب بإستخدام أطر اعمل (),وأضمن ان التصميم متجاوب باستخدام BOOTSTRAPو Tailwindcss ,
+                   أعمل من جهة المخدم باستخدام NODE JS بشكل أساسي باستخدام إطار عمل EXPRESS JS والاتصال مع قواعد البيانات بشكل سلس وآمن`}
             </p>
             <div className="buttons">
                     <button className='primary-btn animation-1' href='' >{lng=='en'?`Contact me`:`تـواصل معي`} <i className="fa-brands fa-linkedin"></i></button>
@@ -79,12 +81,13 @@ const handelShowCv = async () => {
                     </button>
             </div>
         
-            </div>
-            <div className='row right'>
+            </div >
+            <div 
+            className='row right'>
                 <div className='img'>
                     <img src='../../images/home.svg' alt=''/>
                 </div>
-            </div>
+            </div >
         </div>
     </section>
   )

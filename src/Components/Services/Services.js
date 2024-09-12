@@ -16,7 +16,7 @@ const Services=()=> {
             <div className='content'>
                 <ServicesCard 
                 icon={<i className="fa-brands fa-connectdevelop"></i>} 
-                title={lng=="en"?`Website Development`:`تطوير الموقع`}
+                title={lng=="en"?`Website Design`:`تصميم الموقع`}
                 subtitle={lng=="en"?`Design and develop responsive websites using React.js and Next.js.
                            Create attractive user interfaces using Bootstrap and Tailwind CSS`:
                            `تصميم مواقع التجارة الإلكترونية المباشرة باستخدام React.js وNext.js.

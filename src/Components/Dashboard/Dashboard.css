@@ -6,6 +6,9 @@
     font-size: 32px;
 
 }
+.dashboard .header h1{
+    font-size: 22px;
+}
 .dashboard .container{
     padding-top: 120px;
 }

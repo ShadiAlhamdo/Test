@@ -10,9 +10,14 @@ const Contact=()=> {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false); // حالة للتحقق من التحميل
+const [error, setError] = useState(null); // حالة لتخزين الأخطاء
+const [success, setSuccess] = useState(false); // حالة لتخزين النجاح
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // بدء التحميل
+    setError(null); // إعادة تعيين الأخطاء السابقة
 
     const form = { name, email, message };
 
@@ -29,6 +34,8 @@ const Contact=()=> {
         
         // إذا كان الإدراج ناجحاً
         console.log('Data inserted successfully:', data);
+        setSuccess(true); // ضبط حالة النجاح
+
         setName("");
         setEmail("");
         setMessage("")
@@ -36,9 +43,14 @@ const Contact=()=> {
         // يمكنك هنا تحديث الحالة أو إظهار رسالة نجاح
 
     } catch (err) {
+        setError(error.message); // ضبط حالة الخطأ
+
         toast.error("This didn't work Please Try again later.")
         console.error('Error inserting data:', err.message);
         // إدارة الأخطاء - يمكنك هنا تحديث الحالة لإظهار رسالة خطأ للمستخدم
+    }finally{
+        setLoading(false); // إعادة تعيين حالة التحميل
+
     }
 };
             
@@ -84,9 +96,11 @@ const Contact=()=> {
                     onChange={(e) => setMessage(e.target.value)}
                     required
                 />
-                <button className='secondary-btn' type='submit'>
+                <button className='secondary-btn' type='submit'  disabled={loading}>
                     {lng === 'en' ? 'Send Message' : 'أرسل الرسالة'}
                 </button>
+                {error && <p style={{ color: 'red' }}>{error}</p>} {/* عرض الأخطاء إذا كانت موجودة */}
+            {success && <p style={{ color: 'green' }}>تم إرسال الرسالة بنجاح!</p>} {/* عرض رسالة النجاح */}
             </div>
         </form>
         <div className='contact-links'>

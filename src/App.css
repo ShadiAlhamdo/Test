@@ -53,6 +53,7 @@ ul{
     border-radius: 5px;
     transition: all 0.3s;
     border-width: 2px;
+    cursor: pointer;
 }
 .primary-btn:hover{
     background-color: #fff;

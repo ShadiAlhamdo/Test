@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import cookies from 'js-cookie';
 import supabase from '../../supabaseClient';
 import formatDate from '../formDate';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Projectcard=(props)=> {
     const lng=cookies.get('i18next')||"en"
@@ -51,7 +52,7 @@ const getTechnical= async () => {
     <>
    
        
-                <div className='projectcard' key={props.key}>
+                <ScrollAnimation animateIn='bounceInRight' className='projectcard' key={props.key}>
                 <div className='img'>
                    <img src={props.img} alt='img'/>
                 </div>
@@ -82,7 +83,7 @@ const getTechnical= async () => {
                    
               
             </div>
-            </div>
+            </ScrollAnimation>
          
     </>
   )

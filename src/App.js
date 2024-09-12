@@ -7,6 +7,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import cookies from 'js-cookie';
 import  "./App.css";
 import Homepage from "./Components/Homepage";
+import "animate.css/animate.compat.css"
+
 import Dashboard from "./Components/Dashboard/Dashboard";
 
 
@@ -39,7 +41,8 @@ i18n
 
 function App() {
   const { t } = useTranslation();
-  const lng=cookies.get('i18next')||"en"
+  const lng=cookies.get('i18next')||"en";
+  console.log(lng+"2555555555555");
   useEffect(()=>{
     window.document.dir = i18n.dir();
   },[lng])

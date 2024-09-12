@@ -15,7 +15,7 @@ import Homepage from './Components/Homepage';
 import Dashboard from './Components/Dashboard/Dashboard';
 import ErrorPage from './error-page';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
  
   {
     path: "/dashboard",
@@ -24,8 +24,8 @@ const router = createHashRouter([
   },
   {
     path: "/",
-    element: <Homepage />,
-    
+    element: <App />,
+    errorElement: <ErrorPage />,
   },
 ]);
 
