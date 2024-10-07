@@ -60,8 +60,10 @@ const getTechnical= async () => {
                 <p className='date'>{formatDate(props.date)}</p>
                 <div className='project-name'>
                     <h3>{lng=='en'?props.name_en: props.name_ar}</h3>
-                    <a href={props.demo}><i class="fa-regular fa-eye"></i>demo</a>
-                    <a href={props.source}>source<i class="fa-solid fa-download"></i></a>
+                    <div>
+                        <a href={props.demo}><i class="fa-regular fa-eye"></i>demo</a>
+                        <a href={props.source}>source<i class="fa-solid fa-download"></i></a>
+                    </div>
                 </div>
                 <p className='desc'>
                 {lng=='en'?props.desc_en :props.desc_ar}
