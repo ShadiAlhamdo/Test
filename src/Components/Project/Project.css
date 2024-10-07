@@ -30,6 +30,11 @@
     justify-content: space-between;
     margin-bottom: 10px;
 }
+.project .content .projectcard .project-name div{
+     display: flex;
+    justify-content: space-between;
+    
+}
 .project .content .projectcard .project-name a{
     color: #1aa7ec;
     background-color: #e5e7eb;
@@ -39,6 +44,8 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    height: 35px;
+    width: max-content;
     transition: 0.3s;
 }
 .project .content .projectcard .project-name span:hover{
