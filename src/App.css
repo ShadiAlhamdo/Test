@@ -30,6 +30,8 @@ ul{
 .container{
     margin: 0 auto;
     padding: 20px 30px;
+    max-width: 1400px;
+    overflow:hidden;
     
 }
 .text-blue-600 {
@@ -85,7 +87,7 @@ ul{
     grid-gap: 20px;
 }
 .project .content .projectcard{
-    height: 600px;
+    min-height: 600px;
     padding: 10px 20px;
     border-radius: 10px;
    border:  2px solid #e5e7eb  ;
@@ -170,6 +172,10 @@ ul{
     }
     .contact form {
        min-width: auto !important;
+       flex-direction: column;
+    }
+    .contact form .w-49{
+        width: 100% !important;
     }
 }
 @media  screen and (max-width:900px) {

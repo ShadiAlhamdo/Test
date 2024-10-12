@@ -2,13 +2,14 @@
     position: fixed;
     width: 100%;
     z-index: 10;
+    height: 72px;
 }
 .header .container{
     display: flex;
     justify-content: space-between;
     background-color: #fff;
     box-shadow: 1px 4px 12px rgb(0 0 0 / 26%);
-    height: 10vh;
+
 }
 .header  .logo{
     padding: 0 20px;

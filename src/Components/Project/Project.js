@@ -3,7 +3,6 @@ import Title from '../Title/Title'
 import Projectcard from './Projectcard'
 import cookies from 'js-cookie';
 import supabase from '../../supabaseClient';
-import ScrollAnimation from 'react-animate-on-scroll';
 
 const Project=()=> {
    const lng=cookies.get('i18next')||"en"
@@ -149,6 +148,7 @@ const Project=()=> {
                     img={val.img}
                     key={ind}
                     />
+                    
                   )
                 })
                 }

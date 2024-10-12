@@ -24,14 +24,16 @@ const About=()=> {
               </div>
               <div className='row right'>
                 <h1>{lng=="en"?`Shadi Alhamdo`:`شادي الحمدو`}</h1>
-                <p>{lng=='en'?`I am a computer engineer. I graduated in the sixth month of the year 2024.
-                 During my academic career, my passion led me to learn website development. I developed many websites such as electronic stores, applications for controlling things remotely, personal blogs, education platforms, and automation of reception systems. I focused mainly on Reactjs to build...
-                 Web interfaces and Nodejs for the server as well as dealing with many different technologies whether for design or programming`:
-                 `أنا مهندس كومبيوتر تخرجت في الشهر السادس من العام 2024 وخلال مسيرتي الدراسية قادني الشغف لتعلم تطوير مواقع الويب 
-                 و قد قمت بتطوير العديد من المواقع مثل المتاجر الالكترزنية 
-                 و تطبيقات التحكم بالاشياء عن بعد 
-                 و مدونات شخصية ومنصات التعليم و أتمتة أنظمة أستقبال , قمت بتالركيز بشكل أساسي على 
-                 Reactjs لبناء واجهات الويب و Nodejs للسيرفر وكذلك تعاملت مع العديد من التقنيات المختلفة سواء للتصميم او للبرمجة  `}
+                <p>{lng=='en'?` Recent Computer Engineering graduate with a solid foundation in artificial intelligence, deep
+                                learning, and database systems. Experienced in developing web applications for various projects,
+                                including educational platforms and IoT solutions. Proficient in analyzing and designing software,
+                                as well as utilizing distributed computing methodologies. Aiming to leverage technical skills and
+                                hands-on experience to contribute to innovative tech solutions in a dynamic environment.`:
+                                                `خريج هندسة كمبيوتر حديث مع أساس متين في الذكاء الاصطناعي وعميق
+                                أنظمة التعلم وقواعد البيانات. لديه خبرة في تطوير تطبيقات الويب لمختلف المشاريع،
+                                بما في ذلك المنصات التعليمية وحلول إنترنت الأشياء. يجيد تحليل وتصميم البرامج
+                                وكذلك استخدام منهجيات الحوسبة الموزعة. تهدف إلى الاستفادة من المهارات التقنية و
+                                خبرة عملية للمساهمة في الحلول التقنية المبتكرة في بيئة ديناميكية. `}
                 </p>
                 <div className='skills'>
                   <h1>{lng=='en'?`My Skills`:`مهاراتي`}</h1>

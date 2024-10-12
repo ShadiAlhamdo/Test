@@ -34,7 +34,7 @@ const Header=()=> {
                 </ul>
         </div>
         <select name="language" id="language" onChange={handleChange}>
-            <option>language</option>
+            <option disabled value=""> language</option>
             <option value="en" >English</option>
             <option value="ar">العربية</option>
         </select>
